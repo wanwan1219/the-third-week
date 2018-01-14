@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>面试</title>
+    <link rel="stylesheet" href="../第三周周末作业/css/common.css">
+    <link rel="stylesheet" href="css/header.css">
+</head>
+<body>
+<!--header开始-->
+<div class="header">
+    <img class="img1" src="img/head_01.png" alt="">
+    <div class="inner">
+        <div class="title">
+            <img src="img/dt1.png" alt="">
+        </div>
+    </div>
+</div>
+<!--header结束-->
+<!--main1开始-->
+<div class="main1">
+    <div class="inner">
+        <div class="main1-top clear">
+            <div class="top-lt">
+                <img src="img/md.png" alt="">
+            </div>
+            <div class="top-rt">
+                <div class="more">更多</div>
+            </div>
+        </div>
+        <div class="main1-bot clear">
+            <div class="bot-lt">
+                <i class="dd"></i>
+            </div>
+            <div class="bot-ct">
+                <div class="mid_top">1对1转岗专讯系列</div>
+                <div class="mid_bot clear">
+                    <div class="lt">
+                        <p>铁路公安系统</p>
+                        <p>铁路公安系统</p>
+                        <p>铁路公安系统</p>
+                        <p>铁路公安系统</p>
+                        <p>铁路公安系统</p>
+                        <p>铁路公安系统</p>
+                        <p class="p1">铁路公安系统</p>
+                    </div>
+                    <div class="mid">
+                        <span>53课时</span>
+                        <span>53课时</span>
+                        <span>53课时</span>
+                        <span>53课时</span>
+                        <span>53课时</span>
+                        <span>53课时</span>
+                        <span class="p1">53课时</span>
+                    </div>
+                    <ul>
+                        <li><i class="ej"></i></li>
+                        <li><i class="ej"></i></li>
+                        <li><i class="ej"></i></li>
+                        <li><i class="ej"></i></li>
+                        <li><i class="ej"></i></li>
+                        <li><i class="ej"></i></li>
+                        <li class="p1"><i class="ej"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bot-rt">
+                <div class="bot-rt-top">
+                    系统特训系列
+                </div>
+                <div class="bot-rt-bot">
+                    <div class="clear">
+                        <div class="hei"></div>
+                        <div class="bai"></div>
+                    </div>
+                    <div class="hong"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--main1结束-->
+<!--main2开始-->
+<div class="main2">
+    <div class="inner">
+        <div class="main2-top">
+            <img src="img/ms.png" alt="">
+        </div>
+        <div class="main2-bot">
+            <div class="m2-bot-lt">
+                <i class="dd"></i>
+            </div>
+            <div class="m2-bot-ct">
+                <div class="clear">
+                    <input class="inp1" type="button" value="结构化面试">
+                    <input class="inp1 inp2" type="button" value="无领导小组讨论">
+                </div>
+                <div>
+                   <div class="inp1-zi">结构化面试</div>
+                   <div class="inp2-zi">无领导小组讨论</div>
+                </div>
+            </div>
+            <div class="m2-bot-rt">
+                <div class="gkms">
+                    国考面试热点解读
+                </div>
+                <div class="gk-bot">
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--main2结束-->
+</body>
+<script src="jquery-1.8.3.min.js"></script>
+<script>
+   $(".main1-bot .bot-ct .mid_bot li").click(function(){
+//       var i=$(this).index();
+       $(".main1-bot .bot-ct .mid_bot li i").removeClass("hej");/*所有的红耳机都去掉*/
+       $(this).find("i").addClass("hej"); /*this指向点击的那个位置*//*在给自己添加一个红耳机属性*/
+    });
+    $(".inp1").click(function(){
+//        console.log(".inp1");
+        $(".m2-bot-ct .clear").find("input").removeClass("inp2");
+        $(this).addClass("inp2");
+//        $(".inp2").addClass("inp1");
+//        $(".inp1").removeClass("inp1").addClass("inp2");
+//        $(".inp2").removeClass("inp2").addClass("inp1");
+        $(".inp1-zi").show();
+        $(".inp2-zi").hide();
+    });
+   $(".inp2").click(function(){
+       $(".m2-bot-ct .clear").find("input").removeClass("inp2");
+       $(this).addClass("inp2");
+       $(".inp1").addClass("inp1");
+//       $(".inp2").removeClass("inp2").addClass("inp1");
+//       $(".inp1").removeClass("inp1").addClass("inp2");
+       $(".inp2-zi").show();
+       $(".inp1-zi").hide();
+   })
+
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var a=10;
+    var bb=function(){
+        /*var*/b="b";/*必须声明var才算内部变量 外部不可以访问 不加var就是全局变量 外部也可以访问*/
+        console.log(a);/*我去大街上捡钱*/
+        console.log(b);/*我在自己家里捡钱玩*/
+    }
+    bb();/*调用*/
+    console.log(b);/*我去人家家里捡钱*/
+</script>
+</html>

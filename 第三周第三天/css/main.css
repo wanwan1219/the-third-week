@@ -1,0 +1,157 @@
+/*main样式开始*/
+.main .main-lt{
+    float: left;
+    background: #6e6568;
+    width: 190px;
+}
+.main .main-lt ul li{
+    color: white;
+    height: 28px;
+    cursor: pointer;
+}
+.main .main-lt ul{
+    padding-left: 13px;
+}
+.main .lt1{
+    display: inline-block;
+}
+.main .lt1 ol li{
+    display: none;
+}
+.main ol li{
+    width: 1000px;
+    height: 480px;
+    float: left;
+    display: none;
+    background: yellow;
+}
+.main .main-lt ul li.li1{
+    background: red;
+}
+.main .main-mid{
+    float: left;
+    margin-left: 10px;
+}
+.main-mid .ban1{
+    width: 790px;
+    height: 340px;
+    overflow: hidden;
+    position: relative;
+}
+.main-mid .ban1 ul li{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    float: left;
+    background: white;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.main-mid .ban1 ul li:first-of-type{
+    margin-left: 10px;
+}
+.main-mid .ban1 ul{
+    position: absolute;
+    right: 50%;
+    bottom: 20px;
+    margin-right: -93px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 50px;
+}
+.main-mid .ban1 ul .col{
+    background: red;
+}
+.main-mid .ban1 .clik div{
+    background: #cccccc;
+    width: 15px;
+    height: 40px;
+    position: absolute;
+    top:50%;
+    margin-top: -20px;
+    font:20px/40px "simsun";
+    color: white;
+    display: none;
+    cursor: pointer;
+}
+.main-mid:hover .clik div{
+    display: block;
+}
+.main-mid .clik .prev{
+    left: 0;
+}
+.main-mid .clik .next{
+    right: 0;
+}
+.main-mid .tu1{
+    display: inline-block;
+}
+.main-mid .tu2{
+    display: inline-block;
+    margin-left: 5px;
+}
+.main-mid .ban1{
+    margin-bottom: 5px;
+}
+.main .main-rt{
+    float: right;
+}
+.main-rt .rt_top{
+    width: 190px;
+    height: 115px;
+    background: beige;
+}
+.main-rt .rt_mid{
+    width: 190px;
+    height: 155px;
+    overflow: hidden;
+    /*background: chocolate;*/
+}
+.main-rt .rt_bot{
+    width: 190px;
+    height: 210px;
+    overflow: hidden;
+    /*background: green;*/
+}
+.main-rt .rt_mid ul li{
+    display: inline-block;
+    width: 50px;
+    text-align: center;
+    font:15px/14px "simsun";
+    padding: 8px 0 4px;
+    cursor: pointer;
+}
+.main-rt .rt_mid ul span{
+    font:15px/14px "simsun";
+    width: 50px;
+    text-align: center;
+    margin-left: 30px;
+    padding: 8px 0 4px;
+    cursor: pointer;
+}
+.main-rt .rt_mid ul span:hover{
+    border-bottom: 1px solid red;
+}
+.main-rt .zi{
+    border-bottom:1px solid red ;
+}
+.main-rt .rt_mid .sale{
+    width: 160px ;
+    height: 130px;
+    text-align: center;
+    line-height: 120px;
+    font-size: 40px;
+}
+.main-rt .rt_bot ul li{
+    width: 40px;
+    text-align: center;
+    font: 15px/14px "";
+    padding: 8px 0 4px;
+    display: inline-block;
+    cursor: pointer;
+}
+.main-rt .rt_bot .cost{
+    width: 190px;
+    text-align: center;
+    line-height: 185px;
+    font-size: 40px;
+}

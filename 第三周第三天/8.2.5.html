@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        ol{
+            background: yellow;
+            overflow: hidden;
+        }
+        .div1{
+            width: 500px;
+            height: 500px;
+        }
+        .div1 ol li{
+            float: left;
+            width:100px;
+            height: 100px;
+            text-align: center;
+            font: 36px/100px "";
+            background: pink;
+            cursor:pointer;/*出现小手标志*/
+        }
+        .div1 ul li{
+            width: 500px;
+            height: 400px;
+            text-align: center;
+            line-height: 400px;
+            display: none;
+        }
+        .div1 ol .li1{
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<div class="div1">
+    <ol>
+        <li class="li1">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ol>
+    <ul>
+        <li style="display: block">我是1</li>
+        <li>我是2</li>
+        <li>我是3</li>
+        <li>我是4</li>
+        <li>我是5</li>
+    </ul>
+</div>
+</body>
+<script>
+//    先找人
+var box=document.getElementsByClassName("div1")[0];
+    var olLis=box.children[0].children;
+    var ulLis=box.children[1].children;
+//绑定事件源
+    //给所有的ollis绑定点击事件
+    for(var i=0;i<olLis.length;i++){
+        olLis[i].index=i; /*用index保存当前元素的下角标i*/
+        olLis[i].onclick=function(){
+            /*书写事件驱动*/
+            for(var j=0;j<olLis.length;j++){
+                olLis[j].className=""; /*变成没有设特殊颜色的*/
+                ulLis[j].style.display="none";
+            }
+            olLis[this.index].className="li1";/*点击那个事件就让他的li变成红色*/
+            ulLis[this.index].style.display="block";/*点击让ullis显现*/
+        }
+    }
+</script>
+</html>

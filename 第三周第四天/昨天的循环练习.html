@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        .div1{
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+        }
+        .div1 ol li{
+            float: left;
+            width:100px;
+            height: 100px;
+            text-align: center;
+            font: 36px/100px "";
+            background: pink;
+            cursor:pointer;/*出现小手标志*/
+        }
+        .div1 ul li{
+            width: 500px;
+            height: 400px;
+            text-align: center;
+            line-height: 400px;
+            display: none;
+            background: yellow;
+            overflow: hidden;
+        }
+        .div1 ol .li1{
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<div class="div1">
+    <ol>
+        <li class="li1">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ol>
+    <ul>
+        <li style="display: block">我是1</li>
+        <li b="twu">我是2</li>
+        <li b="qwe">我是3</li>
+        <li b="tyu">我是4</li>
+        <li b="tyr">我是5</li>
+        <p></p>
+    </ul>
+</div>
+<div class="box">
+    <ul>
+        <li></li>
+    </ul>
+    <ul>
+        <li></li>
+    </ul>
+    <ul>
+        <li></li>
+    </ul>
+    <ul>
+        <li></li>
+    </ul>
+</div>
+</body>
+<script src="jquery-1.8.3.min.js"></script>
+<script>
+
+    console.log($(".div1 ul [b^=t]").get(0));
+    console.log($(".div1 ul [b^=t]").get(1));
+    console.log($(".div1 ul [b*=y]").get(1));
+
+//    伪类选择器
+    console.log($(".div1 ul :empty").get(0));  /*打印 ul 下面的空标签 p*/
+
+    console.log($(".div1 ul :hidden").get(1)); /*打印 ul 下面隐藏的第二个元素*/
+
+
+//index() 返回当前元素在其父级中的索引
+$(".box ul li").click( function(){
+    console.log(li.index());
+});
+
+
+
+ $(".div1 ul li").each(function(i){
+     console.log(i);
+ }) ; /*each是jq封装的for循环*/
+   /*等价于  for(var i=0;i<ullis.length;i++){
+                console.log(i);
+            }*/
+
+
+
+    $(".div1 ol li").click(function(){
+//        jQ内部封装一个index（），他之间返回当前元素在他父元素中的索引
+        var i=$(this).index();
+//        $(".div1 ol li").removeClass("li1"); /*remove删除 add添加*/
+//        $(this).addClass("li1");
+        $(".div1 ol li").removeClass("li1").eq(i).addClass("li1");   /*合写*/
+//        $(".div1 ul li").hide();    /*hide()隐藏  show()显现*/
+//        $(".div1 ul li").eq(i).show();     /*eq()是当前元素的下角标 类似于[]*/
+        $(".div1 ul li").hide().eq(i).show();  /*合写*/
+
+
+
+        $(this).addClass("li1").siblings().removeClass("li1");/*给当前元素加上li1属性 其余兄弟去掉li1属性*/
+    })
+</script>
+</html>

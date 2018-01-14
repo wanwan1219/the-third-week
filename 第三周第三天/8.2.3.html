@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<div class="div1">
+    <div class="div2">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+        </ul>
+    </div>
+</div>
+<input type="button" value="啦啦">
+<div class="div3"></div>
+</body>
+<script src="jquery-1.8.3.min.js"></script>
+<script>
+//    关键字$,jQuery
+    var li3=$(".div1 .div2 ul li:nth-child(3)").get(0);
+//jQuery书写css样式
+$(".div2").css({width:100,height:"100px",backgroundColor:"green"});
+$(".div3").css({width:200,height:200,backgroundColor:"red"});
+
+//    事件三要素
+    /*1.要做事先找人
+    * 2.绑定事件源
+    * 书写事件驱动*/
+//1.先找人
+    var btn=document.getElementsByTagName("input")[0];
+    var box=document.getElementsByClassName("div3")[0];
+   /*函数 不调用不执行 调用才执行*/
+//2.绑定事件源
+
+    btn.onclick=function(){
+//        3.书写事件驱动
+        box.style.backgroundColor="blue";
+    }
+//    事件只能一个一个绑，不能几个同时绑
+//    用for循环
+var lis=document.getElementsByClassName("div1")[0].children[0].children[0].children;
+//console.log(lis);/*打印lis*/
+var len=lis.length; /*定义lis的长度*/
+
+//    for (var i=0;i<len;i++){
+//        lis[i].onclick=function(){
+//            console.log(1);
+//        }
+//    }
+
+
+
+/*点击谁就出现谁对应的索引index（下标）*/
+for (var i=0;i<len;i++){
+    lis[i].index=i;    /*用index来存储元素的下角标i*/
+    lis[i].onclick=function(){
+        console.log(this.index);/*谁调用 this 就指向谁*/ /*出现this指向的那个元素的下角标*/
+    }
+}
+
+
+
+
+/*对象的属性名，值 他们之间用：分隔开 两个属性对之间用，分开 最后一个不写，
+* 键：值 表示一个 键值对  对象{}：键值对的集合*/
+var f={index:10,nub:11,pp:12};
+
+
+
+
+//    jq 1.隐式迭代 2.链式访问
+//隐式迭代：内部自带for循环
+//链式访问：
+   /* $(".div1 .div2 ul li").get(0).click(function(){
+        console.log(2);
+    });*/
+
+</script>
+</html>

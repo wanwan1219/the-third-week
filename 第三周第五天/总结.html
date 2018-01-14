@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box ul li.col{/*并集选择器*/
+            /*找到box 下面ul 下面li并且这个li的名字叫col*/
+        }
+        .box ul li:nth-child(2){ /*依据父级来的数字2*/
+            background: greenyellow;
+        }
+        .box ul li:nth-of-type(2){ /*依据li来的数字2*/
+            background: green;
+        }
+        /*权重：！important > js > 行内*/
+    </style>
+</head>
+<body>
+<div class="box1"></div>
+<div class="box">
+    <ul>
+        <p>0</p>
+        <li>1</li>
+        <li>2</li>
+        <li class="col">3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</div>
+</body>
+<script src="../第三周周末作业/jquery-1.8.3.min.js"></script>
+<script>
+//  选择器
+    $(".box ul li:nth-child(3)").click(function(){
+    })/*找这个元素css怎么找 jq就怎么找*/
+    $(".box,.box1").css({background:"red",width:100})/*字符串加引号 不同属性 用，隔开*/
+
+
+
+//    属性选择器
+    /*[]来写属性选择器
+    * [name] 就会去页面中找属性名为name的元素*/
+    /* [name=sjx] 就会去页面中找属性名为name 并且 属性值为sjx的元素
+    * [name^=s]   就会去页面中找属性名为name 并且 属性值开头为s的元素
+    * [name$=x]   就会去页面中找属性名为name 并且 属性值结尾为x的元素
+    * [name*=j]   就会去页面中找属性名为name 并且 属性值含有j的元素
+    * */
+//    伪类选择器
+    /*：nth-child()
+    ：first-child()
+    ：last-child()
+    ：only-child()
+    ：empty:空元素，这个里面什么都不可以有，哪怕空格都不行
+    ：hidden：找到当前隐藏的元素，<br/>也会识别成隐藏的元素*/
+
+
+    $(".box ul li").each(function(){
+        /*.each 当前所查找的集合的下角标都运行这个方法*/
+    })
+            /*.size返回的就是当前集合的大小，当前集合的长度  可以直接用.length*/
+
+
+
+//    方法
+    hide()show()/*显示 隐藏*/
+    fadeIn()fadeOut()/*淡入 淡出*/
+    slideDown()slideUp()/*卷帘下拉 卷帘上收起*/
+    toggle()fadeToggle()slideToggle()/*切换 识别是none还是block的状态 是none 就block 是block就none*/
+
+
+
+</script>
+</html>

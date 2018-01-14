@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+.box1>.box2>ul>li{$}*8
+<div class="box1">
+    <div class="box2">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+        </ul>
+    </div>
+</div>
+</body>
+<script>
+  /*  var j="abc";
+//    字符串必须加引号
+//    只有数字和变量不用加引号
+    console.log(j);*/
+    var box=document.getElementsByClassName("box1")[0];
+  /*1.0*/ var box1=document.getElementsByClassName("box2")[0];
+  /*2.0*/var li3=box1.children[0].children[0].children[2];
+    console.log(li3);
+</script>
+</html>
